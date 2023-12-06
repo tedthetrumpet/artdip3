@@ -6,15 +6,11 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-
-  // plugins: [require.resolve('docusaurus-lunr-search')], 
-
-  title: 'Artist Diploma in Music',
-  tagline: 'This is the tagline',
-  //favicon: 'img/favicon.ico',
+  title: 'My Site',
+  tagline: 'Dinosaurs are cool',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -24,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'tedthetrumpet', // Usually your GitHub org/user name.
-  projectName: 'artdip2', // Usually your repo name.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -38,7 +34,6 @@ const config = {
     locales: ['en'],
   },
 
-
   presets: [
     [
       'classic',
@@ -46,13 +41,18 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: '/'
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-         /*  editUrl:
-            'https://github.com/tedthetrumpet', */
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -66,28 +66,27 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Artist Diploma in Music',
-       /*  logo: {
+        title: 'My Site',
+        logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
-        }, */
+        },
         items: [
           {
             type: 'docSidebar',
-            //sidebarId: 'tutorialSidebar', // where is this?
-            sidebarId: 'handbookSidebar',
+            sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Handbook',
+            label: 'Tutorial',
           },
-          //{to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://www.rcs.ac.uk/',
-            label: 'RCS',
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
             position: 'right',
           },
         ],
       },
- /*      footer: {
+      footer: {
         style: 'dark',
         links: [
           {
@@ -131,7 +130,7 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      }, */
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
@@ -140,8 +139,3 @@ const config = {
 };
 
 export default config;
-
-/* export default {
-  config;
-  plugins: ['@docusaurus/plugin-content-pages'],
-}; */
