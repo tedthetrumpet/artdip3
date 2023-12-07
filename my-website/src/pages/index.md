@@ -9,7 +9,9 @@ hide_table_of_contents: true
 # Artist Diploma in Music
 
 
-## Programme Handbook September 2023
+## Programme Handbook
+
+### September 2023
 
 
 
